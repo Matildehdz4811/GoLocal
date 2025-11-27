@@ -27,18 +27,18 @@ export class Tab1Page implements OnInit {
   catList: any[] = [
     { key: 'taquerias', icon: '🌮', style: 'c-food' },
     { key: 'restaurantes', icon: '🍴', style: 'c-eat' },
+    { key: 'cabanas', icon: '🏡', style: 'c-stay' },
+    { key: 'loncherias', icon: '🍽️', style: 'c-eat' },
+    { key: 'hoteles', icon: '🏨', style: 'c-stay' },
     { key: 'cascadas', icon: '🏞', style: 'c-nature' },
     { key: 'presas', icon: '💧', style: 'c-water' },
-    { key: 'cabanas', icon: '🏡', style: 'c-stay' },
-    { key: 'hoteles', icon: '🏨', style: 'c-stay' },
     { key: 'turismo', icon: '🌟', style: 'c-fun' },
+    { key: 'albercas', icon: '🏊', style: 'c-water' },
     { key: 'dulces', icon: '🍬', style: 'c-sweet' },
     { key: 'plaza', icon: '🏛', style: 'c-place' },
-    { key: 'albercas', icon: '🏊', style: 'c-water' },
     { key: 'mercados', icon: '🛍', style: 'c-market' },
     { key: 'panaderias', icon: '🍞', style: 'c-eat' },
     { key: 'museo', icon: '🏛️', style: 'c-museum' },
-    { key: 'pizzeria', icon: '🍕', style: 'c-eat' },
     { key: 'historia', icon: '📜', style: 'c-place' }
   ];
 

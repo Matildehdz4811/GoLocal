@@ -1,23 +1,16 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-
   private currentLang = new BehaviorSubject<string>('es');
   public currentLang$ = this.currentLang.asObservable();
-
-  // AHORA CADA CATEGORÍA ES UNA LISTA [] DE LUGARES
   private content: any = {
     es: {
       heroTitle: "Descubre la magia de Calvillo",
       heroDesc: "Guayaba, arte, historia y sabor en un solo lugar.",
       searchPlaceholder: "Busca un lugar...",
-      
-      // --- CATEGORÍA: TAQUERÍAS (Lista) ---
-     // DENTRO DE data.service.ts
 taquerias: [
   {
     id: 1,
@@ -150,9 +143,6 @@ taquerias: [
     reviews: []
   }
 ],
-
-      // --- CATEGORÍA: HOTELES (Lista) ---
-     // DENTRO DE data.service.ts
 hoteles: [
   {
     id: 1,
@@ -445,19 +435,262 @@ cabanas: [
           reviews: []
         }
 ],
-      cascadas: [
-        
-      ],
-      dulces: [],
-      
-    },
 
+    loncherias: [
+      {
+          id: 1,
+          title: "Lonchería boulevard",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Blvd. Rodolfo Landeros Gallegos 461, José Landeros, 20804 Calvillo, Ags.",
+          horario: " Cierra a las 5 p.m.",
+          telefono: " 495 956 1161",
+          precio_persona: "Precio por persona: $1-100",
+          reviews: []
+        },
+        {
+          id: 2,
+          title: "Loncheria Don Juan",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: ": 20805, Calvillo - Aguascalientes 840, Independencia, Calvillo, Ags.",
+          horario: " Cierra a las 7 p.m.",
+          telefono: " 495 109 7683",
+          precio_persona: "Precio por persona: $1-100",
+          reviews: []
+        },
+        {
+          id: 3,
+          title: "LONCHERIA TINA",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: " Blvd. Rodolfo Landeros Gallegos 453, José Landeros, 20804 Calvillo, Ags.",
+          horario: " Cierra a las 6 p.m.",
+          telefono: " 495 956 0077",
+          precio_persona: "Precio por persona: $1-100",
+          reviews: []
+        },
+       {
+          id: 4,
+          title: "Loncheria y Cenaduria LA MOTA",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: " Lázaro Cárdenas 101, López Mateos, 20802 Calvillo, Ags.",
+          horario: " Abre 10:30 a.m.",
+          telefono: "495 136 6282",
+          precio_persona: "Precio por persona: $1-100",
+          reviews: []
+        }, 
+        {
+          id: 5,
+          title: "Loncheria y Cenaduria De con Polo",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Lázaro Cárdenas 122, López Mateos, 20802 Calvillo, Ags.",
+          horario: "Cierra a las 11 p.m.",
+          telefono: "495 105 2722",
+          precio_persona: "Precio por persona: $1-100",
+          reviews: []
+        }, 
+        {
+          id: 6,
+          title: "Gorditas Calvillo",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: " C. 5 de Mayo, Las Flores, 20805 Calvillo, Ags.",
+          horario: "Abre a las 8 a.m.",
+          telefono: "495 132 3214",
+          precio_persona: "Precio por persona: $1-100",
+          reviews: []
+        },
+        {
+          id: 7,
+          title: "Gorditas Calvillo",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: " C. 5 de Mayo, Las Flores, 20805 Calvillo, Ags.",
+          horario: "Abre a las 8 a.m.",
+          telefono: "495 132 3214",
+          precio_persona: "Precio por persona: $1-100",
+          reviews: []
+        },  
+        {
+          id: 7,
+          title: "Gorditas Jenny",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "C. Jesús Gómez Portugal 419A, Zona Centro, 20800 Calvillo, Ags.",
+          horario: "Abre a las 8:30 a.m.",
+          telefono: "495 956 1531",
+          precio_persona: "Precio por persona: $1-100",
+          reviews: []
+        },  
+        {
+          id: 8,
+          title: "Birrieria El Pariente",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "C. 5 de Mayo 911a, Las Flores, 20805 Calvillo, Ags.",
+          horario: "Cierra a las 12 p.m.",
+          precio_persona: "Precio por persona: $100-200",
+          reviews: []
+        },  
+    ],
+      cascadas: [
+        {
+          id: 1,
+          title: "Cascada De Los Huenchos",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Dirección: 20872 Calvillo, Ags.",
+          reviews: []
+        },  
+         {
+          id: 2,
+          title: "Cascada De Los Alisos",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Dirección: 20855 Calvillo, Ags.",
+          reviews: []
+        },  
+         {
+          id: 3,
+          title: "Cascada El Garruño",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Dirección: 20855 Calvillo, Ags.",
+          telefono: "449 545 9830",
+          reviews: []
+        },  
+         {
+          id: 4,
+          title: "Cascada De Los Huenchos",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Dirección: 20872 Calvillo, Ags.",
+          reviews: []
+        },   
+      ],
+      presas:[
+        { id: 1,
+          title: "Presa las cabras",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Dirección: R7F9+V6, 20850 Calvillo, Ags.",
+          reviews: []
+        },
+         {
+          id: 2,
+          title: "Presa de Malpaso",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Dirección: Independencia, 20802 Calvillo, Ags.",
+          reviews: []
+        },   
+      ],
+      turismo:[
+         {id: 1,
+          title: "Andador Matamoros",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Dirección: C. Matamoros 504, Zona Centro, 20800 Calvillo, Ags.",
+          horario:"Abierto las 24 horas",
+          reviews: []
+        },
+         {
+          id: 2,
+          title: "Mirador santa cruz de Calvillo",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Dirección: Ajusco 211, Cerrito Alto, 20805 Calvillo, Ags..",
+          reviews: []
+        },   
+           {id: 3,
+          title: "Mirador de Calvillo",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Dirección: Priv. Articulo 115 Const. 109, Zona Centro, 20800 Calvillo, Ags.",
+          telefono:"Teléfono: 495 111 6097",
+          reviews: []
+        },
+          {id: 4,
+          title: "Puentes Colgantes, Cebolletas",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Dirección: 20832 Calvillo, Ags.",
+          horario:"Horario: Abre a las 10 a.m. ",
+          telefono:"Teléfono: 449 102 8878",
+          reviews: []
+        },
+      ],
+      albercas:[
+        {id: 1,
+          title: "Manglar Parque Acuático",
+          desc: "k.",
+          img: "",
+          text: "Ubicada rumbo a Los Patos. Una casa campestre con alberca y jardines para disfrutar el sol de Calvillo.",
+          extra: "Los Patos",
+          direccion: "Dirección: Calvillo - Aguascalientes Km. 43, 20834 Ojocaliente, Ags.",
+          horario:"Horario: Abre a las 10:30 a.m. ",
+          telefono:"Teléfono: 4959583882",
+          reviews: []
+        },
+        {id: 2,
+          title: "Parque Acuático la Cueva",
+          desc: "k.",
+          img: "",
+          text: "Parque acuático con piscinas con toboganes y plataformas de buceo, así como un spa y una cabaña de sudación.",
+          extra: "Áreas de servicio: Zacatecas y en áreas cercanas",
+          direccion: "Dirección: kilómetro 3 Carretera a Presa de los Serna, 20805 Calvillo, Ags.",
+          horario:"Horario:  Cierra a las 6 p.m. ",
+          telefono:"Teléfono: 495 958 8616",
+          reviews: []
+        },
+      ],   
+    },
     en: {
       heroTitle: "Discover Calvillo",
       // ... (Configura el inglés igual si lo necesitas)
     }
   };
-
   constructor() { }
 
   setLanguage(lang: string) { this.currentLang.next(lang); }
